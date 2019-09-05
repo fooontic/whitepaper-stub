@@ -1,0 +1,12 @@
+.search {
+	display: inline-block;
+	width: 100%;
+	height: var(--graphics-size-xl);
+	padding: 0 var(--space-s);
+	box-sizing: border-box;
+	border-radius: var(--radius-xs);
+	background-color: var(--color-bg-ghost);
+	color: var(--color-typo-ghost);
+	font-size: var(--size-text-xl);
+	line-height: var(--graphics-size-xl);
+}

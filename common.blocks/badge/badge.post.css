@@ -1,0 +1,10 @@
+.badge {
+	border-radius: 3px;
+	height: var(--space-m);
+	padding: 0 var(--space-2xs);
+}
+
+.badge_view_caution {
+	background-color: var(--color-bg-caution);
+	color: var(--color-typo-primary);
+}

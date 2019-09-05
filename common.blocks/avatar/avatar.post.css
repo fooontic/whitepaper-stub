@@ -1,0 +1,6 @@
+.avatar {
+	&__photo {
+		border-radius: var(--radius-xs);
+		background-color: var(--color-bg-ghost);
+	}
+}
