@@ -382,9 +382,120 @@ module.exports = {
 							content: [
 								{
 									elem: 'container',
-									mods: { size: 'm' },
+									elemMods: { size: 'm', distribute: 'center' },
 									content: [
+										{
+											block: 'decorator',
+											mods: { distribute: 'between', 'vertical-align': 'baseline' },
+											content: [
+												{
+													block: 'text',
+													mods: { size: '4xl', view: 'primary', font: 'accent', weight: 'bold' },
+													content: 'Picked Pens'
+												},
+												{
+													block: 'pt-icon-plus',
+													mods: { 'vertical-align': 'center' },
+													mix: { block: 'text', mods: { size: 's', view: 'link', weight: 'bold', transform: 'uppercase', spacing: 'm' }},
+													content: [
+														'View more pens',
+														{
+															elem: 'icon',
+															mix: { block: 'icon', mods: { 'size': 's' }},
+															content: {
+																html: `<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M10.594 7l-3.297-3.297 1.414-1.414 5.711 5.711-5.711 5.711-1.414-1.414 3.297-3.297h-8.594v-2h8.594z"/></svg>`
+															}
+														},
+													]
+												},
+											]
+										},
+										{
+											block: 'tpl-grid',
+											mods: { 'col-gap': 'full', 'row-gap': 'full', 's-ratio': '1-1', 'l-ratio': '1-1-1' },
+											content: [
+												{
+													block: 'pen-card',
+													mix: [
+														{ block: 'tpl-grid', elem: 'fraction' },
+														{ block: 'pt-card' }
+													],
+													content: [
+														{
+															elem: 'frame',
+															mix: { block: 'pt-card', elem: 'image' },
+														},
+														{
+															elem: 'info',
+															mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-t': 'm', 'space-b': 'm', distribute: 'between', 'vertical-align': 'center' }, },
+															content: [
+																{
+																	block: 'pt-icon-plus',
+																	mods: { 'vertical-align': 'center' },
+																	content: [
+																		{
+																			elem: 'icon',
+																			elemMods: { 'indent-r': 's'},
+																			content: {
+																				block: 'avatar',
+																				content: {
+																					tag: 'img',
+																					elem: 'photo',
+																					elemMods: { size: 's' },
+																					attrs: { src: 'https://gravatar.com/avatar/b9988266e366bba5714e691e12470787?s=80&d=https://static.codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png' },
+																				},
+																			},
+																		},
+																		{
+																			elem: 'block',
+																			content: [
+																				{
+																					block: 'text',
+																					mods: { size: 'l', view: 'primary', weight: 'bold' },
+																					content: 'Fantastic Pen'
+																				},
+																				{
+																					block: 'text',
+																					mods: { size: 'm', view: 'secondary' },
+																					content: 'Jane Doe'
+																				},
+																			]
+																		}
+																	]
+																},
 
+																{
+																	block: 'icon',
+																	mods: { 'size': 'm', view: 'ghost' },
+																	content: {
+																		html: `<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>`
+																	}
+																},
+															]
+														},
+														{
+															elem: 'footer',
+															mix: { block: 'pt-card', elem: 'footer' },
+															content: [
+																{
+																	block: 'pt-icon-plus',
+																	mods: { 'vertical-align': 'center' },
+																	mix: { block: 'text', mods: { view: 'primary', size: 's' }},
+																	content: [
+																		{
+																			elem: 'icon',
+																			elemMods: { 'indent-r': 'xs'},
+																			content: []
+																		},
+
+																	]
+																},
+															]
+														},
+													]
+												},
+											]
+										},
 									]
 								},
 							]

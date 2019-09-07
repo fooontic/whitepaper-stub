@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Lato:400,700&display=swap');
 
 .theme_font_codepen {
     --font-sans: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
-    --font-accent: 'Josefin Sans', 'Futura' sans-serif;
+    --font-accent: 'Josefin Sans', 'Futura', sans-serif;
 
     font-family: var(--font-sans);
 }

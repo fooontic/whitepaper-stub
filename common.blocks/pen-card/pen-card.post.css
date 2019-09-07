@@ -1,0 +1,8 @@
+.pen-card {
+
+	&__frame {
+		border-radius: 6px;
+    padding-top: 56.25%;
+    background: #efefef;
+	}
+}
