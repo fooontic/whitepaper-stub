@@ -1,0 +1,10 @@
+.player {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: var(--player-height);
+	background:
+		var(--color-bg-secondary)
+		linear-gradient(var(--color-bg-ghost), var(--color-bg-ghost));
+}

@@ -1,0 +1,8 @@
+.tpl-layout_structure_spotify {
+		--player-height: 80px;
+
+    display: grid;
+    grid-template-columns: 200px auto 260px;
+    grid-template-rows: calc(100vh - var(--player-height));
+		overflow: hidden;
+}

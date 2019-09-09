@@ -1,0 +1,68 @@
+.button {
+	border-radius: 999rem;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	box-sizing: border-box;
+	text-align: center;
+	vertical-align: middle;
+
+	&_view {
+		&_primary {
+			background-color: var(--color-bg-brand);
+			color: var(--color-typo-primary);
+			border: 1px solid transparent;
+		}
+	}
+
+	&_view {
+		&_secondary {
+			background-color: var(--color-bg-soft);
+			color: var(--color-typo-brand);
+			border: 1px solid var(--color-bg-tone);
+		}
+	}
+
+	&_view {
+		&_ghost {
+			background-color: var(--color-bg-soft);
+			color: var(--color-typo-primary);
+			border: 1px solid var(--color-bg-tone);
+		}
+	}
+
+	&_size {
+		&_m {
+			font-size: var(--size-text-xs);
+			font-weight: 600;
+			height: var(--space-2xl);
+			line-height: var(--space-2xl);
+			padding: 0 var(--space-3xl);
+
+			&.button_onlyicon {
+				width: var(--space-2xl);
+			}
+		}
+	}
+
+	&_size {
+		&_xl {
+			font-size: var(--size-text-l);
+			font-weight: 600;
+			height: calc(var(--space-2xl) * 2);
+			line-height: calc(var(--space-2xl) * 2);
+			padding: 0 calc(var(--space-2xl) * 2);
+
+			&.button_onlyicon {
+				width: calc(var(--space-2xl) * 2);
+			}
+		}
+	}
+
+	&_onlyicon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+	}
+}

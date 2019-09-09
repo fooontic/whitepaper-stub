@@ -1,0 +1,31 @@
+.tabs {
+	display: flex;
+	align-items: center;
+
+	&__item {
+		font-size: var(--size-text-s);
+		color: var(--color-typo-secondary);
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 0.2em;
+		position: relative;
+		line-height: 40px;
+		margin-right: var(--space-l);
+
+		&_state {
+			&_active {
+				color: var(--color-typo-primary);
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					width: 30px;
+					height: 2px;
+					background-color: var(--color-bg-brand);
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+}

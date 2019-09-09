@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700&display=swap');
+
+.theme_font_spotify {
+    --font-sans: 'Barlow', 'Helvetica Neue', 'Helvetica', Arial, Sans-Serif;
+
+    font-family: var(--font-sans);
+		letter-spacing: 0.03em;
+		-webkit-font-smoothing: antialiased;
+}
