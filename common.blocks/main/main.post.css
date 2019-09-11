@@ -15,8 +15,8 @@
 			position: absolute;
 			z-index: -1;
 			top: 0;
-			left: calc(var(--gap) * -1);
-			right: calc(var(--gap) * -1);
+			left: calc(var(--gap) * -1 - 2px);
+			right: calc(var(--gap) * -1 - 2px);
 			bottom: -3px;
 		}
 

@@ -1,7 +1,7 @@
 .header {
-	position: fixed;
+	position: absolute;
 	z-index: 10;
-	width: calc(100% -  200px - 260px);
+	width: 100%;
 	box-sizing: border-box;
 
 	&__left-side, &__right-side {

@@ -1,7 +1,7 @@
 /* Базовые цвета от которых выстраивается вся политра */
 $color-base-base: #131418; /* Базовый цвет содержимого, от которого выстраиваются цвета текста, иконок, ... */
 $color-base-essential: #ffffff; /* Базовый цвет поверхностей */
-$color-base-project: #1db954; /* Проектный цвет, от которого выстраивают акцентные состояния */
+$color-base-project: #FFDB4D; /* Проектный цвет, от которого выстраивают акцентные состояния */
 $color-base-phantom: #131418; /* Тонирующий цвет, от которого выстраиватся бордеры, паранджа, ... */
 $color-base-path: #1f9eff; /* Ссылочный цвет, от которого выстраиваются все их состояния */
 
@@ -12,9 +12,9 @@ $color-base-caution: #f2c94c; /* Цвет осторожности */
 $color-base-normal: #56b9f2; /* Цвет нейтральный */
 $color-base-additional: #9b51e0; /* Цвет нейтральный */
 
-.theme_color_spotify-inverse {
+.theme_color_yandex {
   /* Цвета блоков */
-  --color-bg-brand: color($color-base-project s(+22%) a(100%)); /* Цвет фона брендированый */
+  --color-bg-brand: color($color-base-project a(100%)); /* Цвет фона брендированый */
   --color-bg-border: color($color-base-phantom a(20%) l(+10)); /* Цвет границ */
   --color-bg-stripe: color($color-base-phantom a(5%)); /* Цвет зебры */
   --color-bg-ghost: color($color-base-phantom a(8%)); /* Цвет затенения */
@@ -32,7 +32,7 @@ $color-base-additional: #9b51e0; /* Цвет нейтральный */
   --color-bg-additional: color($color-base-additional a(100%)); /* Цвет фона нейтральный */
 
   /* Цвета текста */
-  --color-typo-brand: color($color-base-project a(100%)); /* Цвет брендового текста */
+  --color-typo-brand: color($color-base-project l(-16%) h(-6) a(100%)); /* Цвет брендового текста */
   --color-typo-primary: color($color-base-base l(-2)); /* Цвет основного текста */
   --color-typo-secondary: color($color-base-base a(70%)); /* Цвет второстепенного текста */
   --color-typo-ghost: color($color-base-base a(30%)); /* Цвет дополнительного текста */

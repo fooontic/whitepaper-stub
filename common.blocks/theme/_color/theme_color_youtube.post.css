@@ -1,8 +1,8 @@
 /* Базовые цвета от которых выстраивается вся политра */
-$color-base-base: #131418; /* Базовый цвет содержимого, от которого выстраиваются цвета текста, иконок, ... */
-$color-base-essential: #ffffff; /* Базовый цвет поверхностей */
-$color-base-project: #1db954; /* Проектный цвет, от которого выстраивают акцентные состояния */
-$color-base-phantom: #131418; /* Тонирующий цвет, от которого выстраиватся бордеры, паранджа, ... */
+$color-base-base: #ffffff; /* Базовый цвет содержимого, от которого выстраиваются цвета текста, иконок, ... */
+$color-base-essential: #000000; /* Базовый цвет поверхностей */
+$color-base-project: #cc0000; /* Проектный цвет, от которого выстраивают акцентные состояния */
+$color-base-phantom: #ffffff; /* Тонирующий цвет, от которого выстраиватся бордеры, паранджа, ... */
 $color-base-path: #1f9eff; /* Ссылочный цвет, от которого выстраиваются все их состояния */
 
 $color-base-success: #20b55f; /* Цвет успеха */
@@ -12,16 +12,16 @@ $color-base-caution: #f2c94c; /* Цвет осторожности */
 $color-base-normal: #56b9f2; /* Цвет нейтральный */
 $color-base-additional: #9b51e0; /* Цвет нейтральный */
 
-.theme_color_spotify-inverse {
+.theme_color_youtube {
   /* Цвета блоков */
-  --color-bg-brand: color($color-base-project s(+22%) a(100%)); /* Цвет фона брендированый */
+  --color-bg-brand: color($color-base-project a(100%)); /* Цвет фона брендированый */
   --color-bg-border: color($color-base-phantom a(20%) l(+10)); /* Цвет границ */
   --color-bg-stripe: color($color-base-phantom a(5%)); /* Цвет зебры */
-  --color-bg-ghost: color($color-base-phantom a(8%)); /* Цвет затенения */
-  --color-bg-default: color($color-base-essential l(-4%)); /* Цвет дефолта */
-	--color-bg-secondary: color($color-base-essential a(100%)); /* Цвет дефолта */
-  --color-bg-tone: color($color-base-phantom a(70%)); /* Цвет паранджи */
-  --color-bg-soft: color($color-base-essential a(97%)); /* Цвет молока */
+  --color-bg-ghost: color($color-base-phantom a(5%)); /* Цвет затенения */
+  --color-bg-default: color($color-base-essential a(100%)); /* Цвет дефолта */
+	--color-bg-secondary: color($color-base-essential l(+6%)); /* Цвет дефолта */
+  --color-bg-tone: color($color-base-phantom a(80%)); /* Цвет паранджи */
+  --color-bg-soft: color($color-base-essential a(80%)); /* Цвет молока */
   --color-bg-link: color($color-base-path a(100%)); /* Цвет фона ссылки */
 
   --color-bg-success: color($color-base-success a(100%)); /* Цвет фона успеха */
@@ -34,15 +34,15 @@ $color-base-additional: #9b51e0; /* Цвет нейтральный */
   /* Цвета текста */
   --color-typo-brand: color($color-base-project a(100%)); /* Цвет брендового текста */
   --color-typo-primary: color($color-base-base l(-2)); /* Цвет основного текста */
-  --color-typo-secondary: color($color-base-base a(70%)); /* Цвет второстепенного текста */
-  --color-typo-ghost: color($color-base-base a(30%)); /* Цвет дополнительного текста */
+  --color-typo-secondary: color($color-base-base a(66%)); /* Цвет второстепенного текста */
+  --color-typo-ghost: color($color-base-project l(90%) a(30%)); /* Цвет дополнительного текста */
   --color-typo-disable: color($color-base-base a(30%)); /* Цвет неактивного текста */
 
-  --color-typo-success: color($color-base-success s(+14) l(-8)); /* Цвет текста успеха */
-  --color-typo-alert: color($color-base-alert s(+3) l(-7)); /* Цвет текста ошибки */
-  --color-typo-warning: color($color-base-warning h(-4) h(-2) l(-2)); /* Цвет текста предупреждения */
-  --color-typo-caution: color($color-base-caution s(+15) h(-8) l(-10)); /* Цвет текста осторожности */
-  --color-typo-normal: color($color-base-normal s(+14) l(-4)); /* Цвет фона нейтральный */
+  --color-typo-success: color($color-base-success s(+14) ); /* Цвет текста успеха */
+  --color-typo-alert: color($color-base-alert s(+3) ); /* Цвет текста ошибки */
+  --color-typo-warning: color($color-base-warning h(-4) ); /* Цвет текста предупреждения */
+  --color-typo-caution: color($color-base-caution s(+15)); /* Цвет текста осторожности */
+  --color-typo-normal: color($color-base-normal s(+14) ); /* Цвет фона нейтральный */
   --color-typo-additional: color($color-base-additional s(+20) l(-8)); /* Цвет фона нейтральный */
 
   /* Цвета ссылок */

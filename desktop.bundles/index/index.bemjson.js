@@ -10,10 +10,13 @@ module.exports = {
 		{ elem: 'js', url: 'https://code.jquery.com/jquery-3.2.1.js' },
 	],
 	scripts: [{ elem: 'js', url: 'index.min.js' }],
-	mix: {
-		block: 'theme',
-		mods: { color: 'spotify', space: 'default', size: 'spotify', gap: 'small', menu: 'default', breakpoint: 'default', font: 'spotify' }
-	},
+	mix: [
+		{
+			block: 'theme',
+			mods: { color: 'youtube', space: 'default', size: 'spotify', gap: 'small', menu: 'default', breakpoint: 'default', font: 'spotify' }
+		},
+		{ block: 'page' }
+	],
 	content: [
 		{
 			block: 'tpl-layout',
@@ -215,7 +218,10 @@ module.exports = {
 					content: [
 						{
 							block: 'header',
-							mix: { block: 'decorator', mods: { 'space-v': 'm', 'space-h': 'xl', distribute: 'between', 'vertical-align': 'center' }},
+							mix: [
+								{ block: 'decorator', mods: { 'space-v': 'm', 'space-h': 'xl', distribute: 'between', 'vertical-align': 'center' }},
+								{ block: 'theme', mods: { color: 'spotify' }, }
+							],
 							content: [
 								{
 									elem: 'left-side',
