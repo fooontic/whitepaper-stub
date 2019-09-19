@@ -4,6 +4,7 @@
 	bottom: 0;
 	width: 100%;
 	height: var(--player-height);
+	box-sizing: border-box;
 	border-top: 1px solid  var(--color-bg-border);
 	background:
 		var(--color-bg-secondary)

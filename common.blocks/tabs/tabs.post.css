@@ -1,16 +1,8 @@
 .tabs {
-	display: flex;
-	align-items: center;
 
 	&__item {
-		font-size: var(--size-text-s);
-		color: var(--color-typo-secondary);
-		text-transform: uppercase;
-		font-weight: 600;
-		letter-spacing: 0.2em;
 		position: relative;
 		line-height: 40px;
-		margin-right: var(--space-l);
 
 		&_state {
 			&_active {

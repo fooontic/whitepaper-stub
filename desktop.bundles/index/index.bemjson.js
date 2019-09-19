@@ -353,23 +353,39 @@ module.exports = {
 
 										{
 											block: 'tabs',
-											mix: { block: 'decorator', mods: { 'indent-b': 'xl' }},
+											mix: { block: 'decorator', mods: { 'indent-b': 'xl', 'distribute': 'left' }},
 											content: [
 												{
 													elem: 'item',
 													elemMods: { state: 'active' },
+													mix: [
+														{ block: 'text', mods: { size: 's', view: 'secondary', transform: 'uppercase', spacing: 'm', weight: 'bold' }},
+														{ block: 'decorator', mods: { 'indent-r': 'l' }},
+													],
 													content: 'Overview'
 												},
 												{
 													elem: 'item',
+													mix: [
+														{ block: 'text', mods: { size: 's', view: 'secondary', transform: 'uppercase', spacing: 'm', weight: 'bold' }},
+														{ block: 'decorator', mods: { 'indent-r': 'l' }},
+													],
 													content: 'Fans also like'
 												},
 												{
 													elem: 'item',
+													mix: [
+														{ block: 'text', mods: { size: 's', view: 'secondary', transform: 'uppercase', spacing: 'm', weight: 'bold' }},
+														{ block: 'decorator', mods: { 'indent-r': 'l' }},
+													],
 													content: 'About'
 												},
 												{
 													elem: 'item',
+													mix: [
+														{ block: 'text', mods: { size: 's', view: 'secondary', transform: 'uppercase', spacing: 'm', weight: 'bold' }},
+														{ block: 'decorator', mods: { 'indent-r': 'l' }},
+													],
 													content: 'Concerts'
 												},
 											]
@@ -888,7 +904,7 @@ module.exports = {
 								},
 								{
 									block: 'tpl-grid',
-									mods: { 'col-gap': 'half', 'row-gap': 'two-thirds', 's-ratio': '1-1-1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1' },
+									mods: { 'col-gap': 'half', 'row-gap': 'two-thirds', 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1' },
 									mix: { block: 'decorator', mods: { 'indent-b': '3xl' }},
 									content: [
 										{
@@ -1342,7 +1358,7 @@ module.exports = {
 								},
 								{
 									block: 'tpl-grid',
-									mods: { 'col-gap': 'half', 'row-gap': 'two-thirds', 's-ratio': '1-1-1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1' },
+									mods: { 'col-gap': 'half', 'row-gap': 'two-thirds', 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1' },
 									content: [
 										{
 											elem: 'fraction',
@@ -1711,173 +1727,168 @@ module.exports = {
 
 				{
 					block: 'player',
+					mix: { block: 'decorator', mods: { distribute: 'between', 'vertical-align': 'center', 'space-v': 's', 'space-h': 'm' }},
 					content: [
 						{
-							block: 'decorator',
-							mods: { distribute: 'between', 'vertical-align': 'center', 'space-a': 'm' },
+							block: 'player',
+							elem: 'info',
+							mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }, },
 							content: [
 								{
-									block: 'player',
-									elem: 'info',
-									mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }, },
-									content: [
-										{
-											block: 'pt-icon-plus',
-											elem: 'icon',
-											elemMods: { 'indent-r': 's' },
-											content: {
-												tag: 'img',
-												block: 'image',
-												attrs: { src: 'https://avatars.yandex.net/get-music-content/38044/3ffda67c.a.694025-1/50x50' },
-											},
-										},
-										{
-											block: 'pt-icon-plus',
-											elem: 'block',
-											content: [
-												{
-													block: 'pt-icon-plus',
-													mods: { 'vertical-align': 'center' },
-													mix: { block: 'text', mods: { size: 's', view: 'primary' }},
-													content: [
-														'Panasonic Youth',
-														{
-															elem: 'icon',
-															elemMods: { 'indent-l': 'm'},
-															mix: { block: 'icon', mods: { size: 's' }, },
-															content: {
-																html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 5.409l-.832-1.248C5.742 2.02 2 2.998 2 5.92c0 .861.336 1.735.922 2.6.585.864 1.385 1.665 2.218 2.359A20.441 20.441 0 0 0 8 12.859a20.44 20.44 0 0 0 2.86-1.98c.833-.694 1.633-1.495 2.218-2.36.587-.864.922-1.738.922-2.6C14 3 10.258 2.022 8.832 4.162L8 5.409zm-.682-2.571C5.05.92 1 2.44 1 5.92 1 10.42 8 14 8 14s7-3.58 7-8.08c0-3.48-4.05-5-6.318-3.082A3.66 3.66 0 0 0 8 3.606c-.2-.3-.43-.555-.682-.768z"/></svg>`
-															}
-														},
-													]
-												},
-												{
-													block: 'text',
-													mods: { size: 'xs', view: 'secondary' },
-													mix: { block: 'decorator', mods: { 'indent-t': '3xs' }},
-													content: 'The Dillinger Escape Plan'
-												},
-											]
-										}
-									]
+									block: 'pt-icon-plus',
+									elem: 'icon',
+									elemMods: { 'indent-r': 's' },
+									content: {
+										tag: 'img',
+										block: 'image',
+										attrs: { src: 'https://avatars.yandex.net/get-music-content/38044/3ffda67c.a.694025-1/50x50' },
+									},
 								},
 								{
-									block: 'player',
-									elem: 'controls',
+									block: 'pt-icon-plus',
+									elem: 'block',
 									content: [
-										{
-											block: 'decorator', mods: { 'indent-b': 'xs', distribute: 'center', 'vertical-align': 'center' },
-											content: [
-												{
-													block: 'icon', mods: { size: 's', view: 'primary' },
-													mix: { block: 'decorator', mods: { 'indent-r': '2xl' }},
-													content: {
-														html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M15 4.5l-3-1.7v1.368c-1.051.195-1.878.548-2.562 1.012-1.043.707-1.712 1.644-2.326 2.503l-.019.026c-.631.884-1.209 1.685-2.092 2.283C4.13 10.582 2.922 11 1 11v1c2.078 0 3.493-.456 4.562-1.18 1.043-.707 1.712-1.644 2.326-2.503l.019-.026c.631-.884 1.208-1.685 2.092-2.283.52-.352 1.16-.643 2.001-.82V6.2l3-1.7zM12 13.2v-1.368c-1.051-.195-1.878-.549-2.562-1.012a6.426 6.426 0 0 1-.947-.789c.216-.279.407-.547.58-.79l.02-.027c.27.285.567.547.908.778.52.352 1.16.643 2.001.82V9.8l3 1.7-3 1.7zM5.562 5.18c.354.24.666.507.947.789-.216.279-.407.547-.58.79l-.02.027a5.517 5.517 0 0 0-.908-.778C4.13 5.418 2.922 5 1 5V4c2.078 0 3.493.456 4.562 1.18z"/></svg>`
-													}
-												},
-												{
-													block: 'icon', mods: { size: 's', view: 'primary' },
-													mix: { block: 'decorator', mods: { 'indent-r': '2xl' }},
-													content: {
-														html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5 8.6V13H3V3H5V7.4L14 2V14L5 8.6Z"/></svg>`
-													}
-												},
-												{
-													block: 'button',
-													mods: { size: 'm', view: 'ghost', onlyicon: true },
-													mix: { block: 'decorator', mods: { 'indent-r': '2xl' }},
-													content: {
-														block: 'icon',
-														mods: { size: 's' },
-														content: {
-															html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M15 8L3 15V1L15 8Z"/></svg>`
-														}
-													},
-												},
-												{
-													block: 'icon', mods: { size: 's', view: 'primary' },
-													mix: { block: 'decorator', mods: { 'indent-r': '2xl' }},
-													content: {
-														html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11 7.4V3H13V13H11V8.6L2 14V2L11 7.4Z"/></svg>`
-													}
-												},
-												{
-													block: 'icon', mods: { size: 's', view: 'primary' },
-													content: {
-														html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11 6.2l3-1.7-3-1.7V4H6.42a4.5 4.5 0 0 0-4.478 4.948l.06.602.996-.1-.06-.602A3.5 3.5 0 0 1 6.42 5H11v1.2zM5 9.8l-3 1.7 3 1.7V12h4.58a4.5 4.5 0 0 0 4.478-4.948l-.06-.602-.995.1.06.602A3.5 3.5 0 0 1 9.58 11H5V9.8z"/></svg>`
-													}
-												},
-											]
-										},
-										{
-											block: 'player',
-											elem: 'progress',
-											mix: { block: 'decorator', mods: { distribute: 'between', 'vertical-align': 'center' }},
-											content: [
-												{
-													block: 'text',
-													mods: { size: 'xs', view: 'secondary' },
-													content: '0:47'
-												},
-												{
-													elem: 'track',
-													content: { elem: 'current', attrs: { style: 'width: 37%' }},
-												},
-												{
-													block: 'text',
-													mods: { size: 'xs', view: 'secondary' },
-													content: '2:27'
-												},
-											]
-										},
-									]
-								},
-								{
-									block: 'player',
-									elem: 'additional',
-									mix: { block: 'decorator', mods: { distribute: 'right', 'vertical-align': 'center' }},
-									content: [
-										{
-											block: 'icon', mods: { size: 's', view: 'primary' },
-											mix: { block: 'decorator', mods: { 'indent-r': 'xl' }},
-											content: {
-												html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1 7l4.5-2.5L1 2v5zM8 5h7V4H8v1zM1 14v-1h14v1H1zM1 8.5v1h14v-1H1z"/></svg>`
-											}
-										},
-										{
-											block: 'icon', mods: { size: 's', view: 'primary' },
-											mix: { block: 'decorator', mods: { 'indent-r': 'xl' }},
-											content: {
-												html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" d="M3 13.5h3"/><path d="M2.5 2H6v1H2.5a.5.5 0 0 0-.5.5v6a.5.5 0 0 0 .5.5H6v1H2.5A1.5 1.5 0 0 1 1 9.5v-6A1.5 1.5 0 0 1 2.5 2z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9 10a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm2-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/><path d="M11 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 2A1.5 1.5 0 0 0 7 3.5v9A1.5 1.5 0 0 0 8.5 14h5a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 13.5 2h-5zM8 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5v-9z"/></svg>`
-											}
-										},
 										{
 											block: 'pt-icon-plus',
 											mods: { 'vertical-align': 'center' },
+											mix: { block: 'text', mods: { size: 's', view: 'primary' }},
 											content: [
+												'Panasonic Youth',
 												{
 													elem: 'icon',
-													elemMods: { 'indent-r': 'xs' },
-													mix: { block: 'icon', mods: { size: 's', view: 'primary' },},
+													elemMods: { 'indent-l': 'm'},
+													mix: { block: 'icon', mods: { size: 's' }, },
 													content: {
-														html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 5h4l5-3v12l-5-3H2V5zm4.277 1L10 3.766v8.468L6.277 10H3V6h3.277z"/><path d="M12.61 3.812c1.854 2.318 1.854 6.058 0 8.376l.78.624c2.146-2.682 2.146-6.942 0-9.624l-.78.624z"/></svg>`
+														html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 5.409l-.832-1.248C5.742 2.02 2 2.998 2 5.92c0 .861.336 1.735.922 2.6.585.864 1.385 1.665 2.218 2.359A20.441 20.441 0 0 0 8 12.859a20.44 20.44 0 0 0 2.86-1.98c.833-.694 1.633-1.495 2.218-2.36.587-.864.922-1.738.922-2.6C14 3 10.258 2.022 8.832 4.162L8 5.409zm-.682-2.571C5.05.92 1 2.44 1 5.92 1 10.42 8 14 8 14s7-3.58 7-8.08c0-3.48-4.05-5-6.318-3.082A3.66 3.66 0 0 0 8 3.606c-.2-.3-.43-.555-.682-.768z"/></svg>`
 													}
 												},
-												{
-													block: 'player',
-													elem: 'progress',
-													mix: { block: 'decorator', mods: { distribute: 'between', 'vertical-align': 'center' }},
-													content: {
-														elem: 'track',
-														content: { elem: 'current', attrs: { style: 'width: 65%' }},
-													},
-												}
 											]
+										},
+										{
+											block: 'text',
+											mods: { size: 'xs', view: 'secondary' },
+											mix: { block: 'decorator', mods: { 'indent-t': '3xs' }},
+											content: 'The Dillinger Escape Plan'
+										},
+									]
+								}
+							]
+						},
+						{
+							block: 'player',
+							elem: 'controls',
+							content: [
+								{
+									block: 'decorator', mods: { 'indent-b': 'xs', distribute: 'center', 'vertical-align': 'center' },
+									content: [
+										{
+											block: 'icon', mods: { size: 's', view: 'primary' },
+											mix: { block: 'decorator', mods: { 'indent-r': '2xl' }},
+											content: {
+												html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M15 4.5l-3-1.7v1.368c-1.051.195-1.878.548-2.562 1.012-1.043.707-1.712 1.644-2.326 2.503l-.019.026c-.631.884-1.209 1.685-2.092 2.283C4.13 10.582 2.922 11 1 11v1c2.078 0 3.493-.456 4.562-1.18 1.043-.707 1.712-1.644 2.326-2.503l.019-.026c.631-.884 1.208-1.685 2.092-2.283.52-.352 1.16-.643 2.001-.82V6.2l3-1.7zM12 13.2v-1.368c-1.051-.195-1.878-.549-2.562-1.012a6.426 6.426 0 0 1-.947-.789c.216-.279.407-.547.58-.79l.02-.027c.27.285.567.547.908.778.52.352 1.16.643 2.001.82V9.8l3 1.7-3 1.7zM5.562 5.18c.354.24.666.507.947.789-.216.279-.407.547-.58.79l-.02.027a5.517 5.517 0 0 0-.908-.778C4.13 5.418 2.922 5 1 5V4c2.078 0 3.493.456 4.562 1.18z"/></svg>`
+											}
+										},
+										{
+											block: 'icon', mods: { size: 's', view: 'primary' },
+											mix: { block: 'decorator', mods: { 'indent-r': '2xl' }},
+											content: {
+												html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5 8.6V13H3V3H5V7.4L14 2V14L5 8.6Z"/></svg>`
+											}
+										},
+										{
+											block: 'button',
+											mods: { size: 'm', view: 'ghost', onlyicon: true },
+											mix: { block: 'decorator', mods: { 'indent-r': '2xl' }},
+											content: {
+												block: 'icon',
+												mods: { size: 's' },
+												content: {
+													html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M15 8L3 15V1L15 8Z"/></svg>`
+												}
+											},
+										},
+										{
+											block: 'icon', mods: { size: 's', view: 'primary' },
+											mix: { block: 'decorator', mods: { 'indent-r': '2xl' }},
+											content: {
+												html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11 7.4V3H13V13H11V8.6L2 14V2L11 7.4Z"/></svg>`
+											}
+										},
+										{
+											block: 'icon', mods: { size: 's', view: 'primary' },
+											content: {
+												html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11 6.2l3-1.7-3-1.7V4H6.42a4.5 4.5 0 0 0-4.478 4.948l.06.602.996-.1-.06-.602A3.5 3.5 0 0 1 6.42 5H11v1.2zM5 9.8l-3 1.7 3 1.7V12h4.58a4.5 4.5 0 0 0 4.478-4.948l-.06-.602-.995.1.06.602A3.5 3.5 0 0 1 9.58 11H5V9.8z"/></svg>`
+											}
+										},
+									]
+								},
+								{
+									block: 'player',
+									elem: 'progress',
+									mix: { block: 'decorator', mods: { distribute: 'between', 'vertical-align': 'center' }},
+									content: [
+										{
+											block: 'text',
+											mods: { size: 'xs', view: 'secondary' },
+											content: '0:47'
+										},
+										{
+											elem: 'track',
+											content: { elem: 'current', attrs: { style: 'width: 37%' }},
+										},
+										{
+											block: 'text',
+											mods: { size: 'xs', view: 'secondary' },
+											content: '2:27'
 										},
 									]
 								},
 							]
 						},
+						{
+							block: 'player',
+							elem: 'additional',
+							mix: { block: 'decorator', mods: { distribute: 'right', 'vertical-align': 'center' }},
+							content: [
+								{
+									block: 'icon', mods: { size: 's', view: 'primary' },
+									mix: { block: 'decorator', mods: { 'indent-r': 'xl' }},
+									content: {
+										html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M1 7l4.5-2.5L1 2v5zM8 5h7V4H8v1zM1 14v-1h14v1H1zM1 8.5v1h14v-1H1z"/></svg>`
+									}
+								},
+								{
+									block: 'icon', mods: { size: 's', view: 'primary' },
+									mix: { block: 'decorator', mods: { 'indent-r': 'xl' }},
+									content: {
+										html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" d="M3 13.5h3"/><path d="M2.5 2H6v1H2.5a.5.5 0 0 0-.5.5v6a.5.5 0 0 0 .5.5H6v1H2.5A1.5 1.5 0 0 1 1 9.5v-6A1.5 1.5 0 0 1 2.5 2z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9 10a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm2-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/><path d="M11 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 2A1.5 1.5 0 0 0 7 3.5v9A1.5 1.5 0 0 0 8.5 14h5a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 13.5 2h-5zM8 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5v-9z"/></svg>`
+									}
+								},
+								{
+									block: 'pt-icon-plus',
+									mods: { 'vertical-align': 'center' },
+									content: [
+										{
+											elem: 'icon',
+											elemMods: { 'indent-r': 'xs' },
+											mix: { block: 'icon', mods: { size: 's', view: 'primary' },},
+											content: {
+												html: `<svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 5h4l5-3v12l-5-3H2V5zm4.277 1L10 3.766v8.468L6.277 10H3V6h3.277z"/><path d="M12.61 3.812c1.854 2.318 1.854 6.058 0 8.376l.78.624c2.146-2.682 2.146-6.942 0-9.624l-.78.624z"/></svg>`
+											}
+										},
+										{
+											block: 'player',
+											elem: 'progress',
+											mix: { block: 'decorator', mods: { distribute: 'between', 'vertical-align': 'center' }},
+											content: {
+												elem: 'track',
+												content: { elem: 'current', attrs: { style: 'width: 65%' }},
+											},
+										}
+									]
+								},
+							]
+						}
 					]
 				},
 			]

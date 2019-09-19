@@ -6,7 +6,7 @@
 	padding-bottom: var(--space-5xl);
 
 	&__artist-header {
-		padding-top: 180px;
+		padding-top: 110px;
 		position: relative;
 		z-index: 0;
 
@@ -32,5 +32,16 @@
 
 	&__top-songs {
 		width: 100%;
+	}
+}
+
+.theme_color_spotify-inverse .main {
+	&__artist-header::after {
+		background-image: linear-gradient(rgba(255,255,255,0.12), var(--color-bg-secondary) 80%);
+	}
+}
+.theme_color_yandex .main {
+	&__artist-header::after {
+		background-image: linear-gradient(rgba(255,255,255,0.12), var(--color-bg-secondary) 80%);
 	}
 }
